@@ -34,7 +34,7 @@ def setup_cli():
     """
 
     # used to display CLI options for vehicle_types and propulsion_types
-    schema = mds.Schema(mds.TRIPS, 'master')
+    schema = mds.Schema(mds.TRIPS, '0.4.1')
 
     parser = argparse.ArgumentParser()
 
@@ -129,7 +129,7 @@ def setup_cli():
     parser.add_argument(
         "--version",
         type=lambda v: mds.Version(v),
-        default=mds.Version("0.2.1"),
+        default=mds.Version("0.4.0"),
         help="The release version at which to reference MDS, e.g. 0.3.1"
     )
 
@@ -202,7 +202,8 @@ if __name__ == "__main__":
         boundary=boundary_file,
         speed=speed,
         vehicle_types=args.vehicle_types,
-        propulsion_types=args.propulsion_types
+        propulsion_types=args.propulsion_types,
+        version=args.version
     )
 
     print(f"Generating {N} devices for '{provider_name}'")
