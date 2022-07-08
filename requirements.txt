@@ -1,4 +1,4 @@
--e git+https://github.com/CityofSantaMonica/mds-provider@master#egg=mds-provider
+-e git+https://github.com/KASTEL-MobilityLab/mds-provider@master#egg=mds-provider
 jupyter
 python-dateutil
 sortedcontainers
